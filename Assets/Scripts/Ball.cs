@@ -8,6 +8,8 @@ public class Ball : MonoBehaviour
     float velY, velX, deathVel;
     Rigidbody rb;
     public bool grounded, dead;
+    private Animation anim;
+    public float animationSpeed = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,8 @@ public class Ball : MonoBehaviour
         velX = 0;
         deathVel = 0.1f;
         rb = gameObject.GetComponent<Rigidbody>();
+        anim = gameObject.GetComponent<Animation>();
+        anim["Correr"].speed = animationSpeed;
         grounded = false;
         dead = false;
     }
