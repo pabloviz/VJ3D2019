@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float velMod, jumpVel;
+    public float velMod, jumpVel, blinkingFrames, time, blinkingStart;
     private float velX, velY, velZ;
     private Vector3 vel;
     float deathVel;
     Rigidbody rb;
-    public bool grounded, dead;
+    Renderer rend;
+    public bool grounded, dead, blinking;
+    public int lives;
     private Animation anim;
     string currentAnimation = "";
     public Transform body;
+    public GameObject demon;
+
+    public GameObject[] liveImages;
 
     private float sincos45 = Mathf.Sqrt(2)/2.0f;
     // Start is called before the first frame update
     void Start()
     {
+        time = 0.0f;
         velY = 0.0f;
         velX = 0.0f;
         velZ = velMod;
         deathVel = 0.1f;
         rb = gameObject.GetComponent<Rigidbody>();
+        rend = demon.GetComponent<Renderer>();
 
         anim = body.gameObject.GetComponent<Animation>();  
         anim["Correr_F"].speed = 30*velZ;
@@ -33,11 +40,18 @@ public class Ball : MonoBehaviour
 
         grounded = false;
         dead = false;
+        blinking = false;
+
+        blinkingFrames = 2;
+        blinkingStart = 0;
+        time = 0;
+        lives = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += (Time.deltaTime);
         if (!dead)
         {
             //check for player input
@@ -75,12 +89,28 @@ public class Ball : MonoBehaviour
 
             //gameObject.transform.position = gameObject.transform.position + new Vector3(velX, velY, velZ);
             transform.Translate(velX,velY,velZ);
+            /* Quan el ninot es xoca contra alguna cosa, a vegades es cau i es torna boig o canvia per sempre
+             * la seva trajectoria. Sempre hauria d'intentar seguir caminant endevant. Poder es podria fer
+             * modificant la transform, com ho tenia abans.
+             */
         }
 
         else
         {
             if (gameObject.transform.localScale.x > 0)
                 gameObject.transform.localScale = gameObject.transform.localScale - new Vector3(deathVel, deathVel, deathVel);
+        }
+
+        //blinking
+        if (blinking)
+        {
+            if (rend.enabled == false) rend.enabled = true;
+            else rend.enabled = false;
+            if (time - blinkingStart >= blinkingFrames)
+            {
+                rend.enabled = true;
+                blinking = false;
+            }
         }
     }
 
@@ -98,9 +128,18 @@ public class Ball : MonoBehaviour
             grounded = true;
         }
 
-        if (other.tag == "death")
+        if (other.tag == "death" && !blinking)
         {
-            dead = true;
+            --lives;
+
+            liveImages[lives].SetActive(false);
+
+            if (lives <= 0) dead = true;
+            else
+            {
+                blinking = true;
+                blinkingStart = time;
+            }
         }
     }
 /*

@@ -21,7 +21,9 @@ public class Camera : MonoBehaviour
     void Update()
     {
         //follow player if it's not dead
+        Vector3 posBall = ball.transform.position;
+        Vector3 posCamera = gameObject.transform.position;
         if (ballScript.dead != true)
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0, velZ);
+            gameObject.transform.position = new Vector3(posCamera.x, posCamera.y, posBall.z-5);
     }
 }
