@@ -136,15 +136,13 @@ public class Ball : MonoBehaviour
 
     }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "ground")
+    private void OnCollisionEnter(Collision other){
+        if (other.gameObject.tag == "ground")
         {
             grounded = true;
         }
 
-        if (other.tag == "death" && !blinking)
+        if (other.gameObject.tag == "death" && !blinking)
         {
             --lives;
 
@@ -161,6 +159,10 @@ public class Ball : MonoBehaviour
                 blinkingStart = time;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
 
         if (other.tag == "deathBound")
         {

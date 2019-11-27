@@ -17,7 +17,7 @@ public class Spikes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        step = (Time.deltaTime) / speed; //how much distance to cover
+        step = (Time.deltaTime) * speed; //how much distance to cover
         time += step;
         
         //rise
