@@ -15,36 +15,50 @@ public class Ball : MonoBehaviour
     private Animation anim;
     string currentAnimation = "";
     public Transform body;
-    public GameObject demon;
-
+    public GameObject demon, particles, cam;
     public GameObject[] liveImages;
+    Camera camScript;
 
     private float sincos45 = Mathf.Sqrt(2)/2.0f;
     // Start is called before the first frame update
     void Start()
     {
+        //time and velocity
         time = 0.0f;
         velY = 0.0f;
         velX = 0.0f;
         velZ = velMod;
         deathVel = 0.1f;
+
+        //components
         rb = gameObject.GetComponent<Rigidbody>();
         rend = demon.GetComponent<Renderer>();
-
         anim = body.gameObject.GetComponent<Animation>();  
+
+        //animations
         anim["Correr_F"].speed = 30*velZ;
         anim["Correr_L"].speed = 30*velZ;
         anim["Correr_R"].speed = 30*velZ;
         anim["Saltar"].speed = 40*velZ;
         ChangeAnim("Correr_F");
 
+        //booleans
         grounded = false;
         dead = false;
         blinking = false;
 
+        //timing
         blinkingFrames = 2;
         blinkingStart = 0;
         time = 0;
+
+        //game objects
+        particles.SetActive(false);
+
+        //camera
+        camScript = cam.GetComponent<Camera>();
+
+        //misc
         lives = 3;
     }
 
@@ -110,6 +124,8 @@ public class Ball : MonoBehaviour
             {
                 rend.enabled = true;
                 blinking = false;
+
+                particles.SetActive(false);
             }
         }
     }
@@ -134,6 +150,10 @@ public class Ball : MonoBehaviour
 
             liveImages[lives].SetActive(false);
 
+            particles.SetActive(true);
+
+            camScript.setShake();
+
             if (lives <= 0) dead = true;
             else
             {
@@ -141,14 +161,12 @@ public class Ball : MonoBehaviour
                 blinkingStart = time;
             }
         }
-    }
-/*
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "ground")
+
+        if (other.tag == "deathBound")
         {
-            grounded = false;
+            lives = 0;
+            dead = true;
         }
     }
-*/
+
 }
