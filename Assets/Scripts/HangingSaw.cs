@@ -17,6 +17,7 @@ public class HangingSaw : MonoBehaviour
         time += (Time.deltaTime) * speed;
         // Saw moves back and forth
         angle = Mathf.Sin(time)*90; //sin = [-1, 1], our angle is [-90, 90]
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, angle);
+        gameObject.transform.rotation = Quaternion.Euler(0,0,angle);
+        //gameObject.transform.Rotate(0,1,0);
     }
 }
