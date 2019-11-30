@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
-    public float velMod, jumpVel, blinkingFrames, time, blinkingStart;
+    public bool debug = false;
+    public float velMod, jumpVel, blinkingFrames, time, blinkingStart, speedUpVel, speedUpStart;
+    public float speedDownStart;
     private float velX, velY, velZ;
     private Vector3 vel;
     float deathVel;
     Rigidbody rb;
     Renderer rend;
-    public bool grounded, dead, blinking;
+    public bool grounded, dead, blinking, win, speedUpb, speedDownb;
     public int lives;
     private Animation anim;
     string currentAnimation = "";
     public Transform body;
-    public GameObject demon, particles, cam;
+    public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles;
     public GameObject[] liveImages;
     Camera camScript;
+    DeathPlane deathPlaneScript;
 
     private float sincos45 = Mathf.Sqrt(2)/2.0f;
     // Start is called before the first frame update
@@ -29,6 +33,7 @@ public class Ball : MonoBehaviour
         velX = 0.0f;
         velZ = velMod;
         deathVel = 0.1f;
+        speedUpVel = 0.1f;
 
         //components
         rb = gameObject.GetComponent<Rigidbody>();
@@ -46,6 +51,8 @@ public class Ball : MonoBehaviour
         grounded = false;
         dead = false;
         blinking = false;
+        win = false;
+        speedUpb = false;
 
         //timing
         blinkingFrames = 2;
@@ -54,9 +61,14 @@ public class Ball : MonoBehaviour
 
         //game objects
         particles.SetActive(false);
+        speedParticles.SetActive(false);
+        slowParticles.SetActive(false);
 
         //camera
         camScript = cam.GetComponent<Camera>();
+
+        //death plane
+        deathPlaneScript = deathPlane.GetComponent<DeathPlane>();
 
         //misc
         lives = 3;
@@ -102,7 +114,7 @@ public class Ball : MonoBehaviour
             }
 
             //gameObject.transform.position = gameObject.transform.position + new Vector3(velX, velY, velZ);
-            transform.Translate(velX,velY,velZ);
+            if (!win) transform.Translate(velX,velY,velZ);
             /* Quan el ninot es xoca contra alguna cosa, a vegades es cau i es torna boig o canvia per sempre
              * la seva trajectoria. Sempre hauria d'intentar seguir caminant endevant. Poder es podria fer
              * modificant la transform, com ho tenia abans.
@@ -128,6 +140,36 @@ public class Ball : MonoBehaviour
                 particles.SetActive(false);
             }
         }
+
+        //speedup powerup
+        if (speedUpb)
+        {
+            if (time > speedUpStart+3)
+            {
+                speedUpb = false;
+                velMod -= speedUpVel;
+                speedParticles.SetActive(false);
+            }
+        }
+
+        if (speedDownb)
+        {
+            if (time > speedDownStart + 3)
+            {
+                speedDownb = false;
+                velMod += speedUpVel;
+                slowParticles.SetActive(false);
+            }
+        }
+
+        //already won
+        if (win)
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                SceneManager.LoadScene("Main Menu");
+            }
+        }
     }
 
     private void ChangeAnim(string a){
@@ -137,14 +179,16 @@ public class Ball : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "ground")
+    //Podemos hacer que los obstáculos te dañen on collision o on trigger. Si lo hacemos on collision
+    //el demonio se quedará parado por el obstáculo, yo creo que tiene más sentido si hacemos que sea
+    //on trigger
+    private void OnCollisionEnter(Collision other){
+        if (other.gameObject.tag == "ground")
         {
             grounded = true;
         }
 
-        if (other.tag == "death" && !blinking)
+        if (other.gameObject.tag == "death" && !blinking)
         {
             --lives;
 
@@ -162,11 +206,53 @@ public class Ball : MonoBehaviour
             }
         }
 
+        if (other.gameObject.tag == "spring")
+        {
+            rb.AddForce(0, jumpVel * 2, 0, ForceMode.Impulse);
+            ChangeAnim("Saltar");
+            debug = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
         if (other.tag == "deathBound")
         {
             lives = 0;
             dead = true;
         }
+
+        if (other.tag == "win")
+        {
+            win = true;
+            camScript.winCam();
+            deathPlaneScript.winPlane();
+        }
+
+        
+    }
+
+    public void speedUp()
+    {
+        if (!speedUpb)
+        {
+            velMod += speedUpVel;
+        }
+        speedUpb = true;
+        speedUpStart = time;
+        speedParticles.SetActive(true);
+    }
+
+    public void speedDown()
+    {
+        if (!speedDownb)
+        {
+            velMod -= speedUpVel/2;
+        }
+        speedDownb = true;
+        speedDownStart = time;
+        slowParticles.SetActive(true);
     }
 
 }

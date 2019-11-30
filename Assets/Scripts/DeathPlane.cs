@@ -5,7 +5,9 @@ using UnityEngine;
 public class DeathPlane : MonoBehaviour
 {
     public float velZ, maxDistanceFromPlayer;
+    public bool win;
     public GameObject player;
+    Ball playerScript;
     public Vector3 initialPos;
     
     // Start is called before the first frame update
@@ -14,6 +16,7 @@ public class DeathPlane : MonoBehaviour
         velZ = 0.07f;
         maxDistanceFromPlayer = 10.0f;
         initialPos = gameObject.transform.position;
+        playerScript = player.GetComponent<Ball>();
 
     }
 
@@ -26,9 +29,14 @@ public class DeathPlane : MonoBehaviour
         }
         else
         {
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0, velZ);
+            if (!win) gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0, velZ);
         }
 
+    }
+
+    public void winPlane()
+    {
+        win = true;
     }
 
 }

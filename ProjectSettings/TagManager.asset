@@ -7,6 +7,9 @@ TagManager:
   - ground
   - death
   - deathBound
+  - win
+  - player
+  - spring
   layers:
   - Default
   - TransparentFX

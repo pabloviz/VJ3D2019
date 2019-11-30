@@ -8,8 +8,8 @@ public class Camera : MonoBehaviour
     public float angle;
     public GameObject ball;
     Ball ballScript;
-    public bool shake;
-    public float shakeFrames, shakeTime, shakeSeverity, time;
+    public bool shake, win;
+    public float shakeFrames, shakeTime, shakeSeverity, time, timewin;
     Vector3 camPosAux;
 
     // Start is called before the first frame update
@@ -23,6 +23,8 @@ public class Camera : MonoBehaviour
         shakeFrames = 0.3f;
         shake = false;
         shakeSeverity = 0.2f;
+
+        win = false;
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class Camera : MonoBehaviour
         //follow player if it's not dead
         Vector3 posBall = ball.transform.position;
         Vector3 posCamera = gameObject.transform.position;
-        if (ballScript.dead != true)
+        if (ballScript.dead != true && win != true)
             gameObject.transform.position = new Vector3(posCamera.x, posCamera.y, posBall.z-5);
 
         //shake
@@ -45,6 +47,14 @@ public class Camera : MonoBehaviour
             shake = false;
             gameObject.transform.position = new Vector3(camPosAux.x, camPosAux.y, posBall.z - 5);
         }
+
+        if (win)
+        {
+            timewin += Time.deltaTime;
+            gameObject.transform.position = new Vector3(posBall.x + Mathf.Cos(timewin)*5, posCamera.y, posBall.z + Mathf.Sin(timewin)*5);
+            gameObject.transform.rotation = Quaternion.Euler(angle, -((timewin*360/(2*Mathf.PI))+90), 0);
+
+        }
        
     }
 
@@ -53,5 +63,11 @@ public class Camera : MonoBehaviour
         shake = true;
         shakeTime = 0;
         camPosAux = gameObject.transform.position;
+    }
+
+    public void winCam()
+    {
+        win = true;
+        timewin = -(Mathf.PI / 2);
     }
 }
