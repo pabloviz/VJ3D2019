@@ -20,9 +20,12 @@ public class Trapdoor : MonoBehaviour
     {
         if (open && angle < 90)
         {
+            /* ROTATION
             step = (Time.deltaTime) * speed; //how much distance to cover
             angle += step;
             gameObject.transform.rotation = Quaternion.Euler(-angle, 0, 0);
+            */
+            gameObject.transform.position = gameObject.transform.position + new Vector3(0, -speed, 0);
         }
     }
 

@@ -82,8 +82,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacd8c3449e0b8b4bbc9236b3882a841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velZ: 0.1
-  sideVel: 0.1
+  velMod: 0
   jumpVel: 7
+  blinkingFrames: 0
+  time: 0
+  blinkingStart: 0
   grounded: 0
   dead: 0
+  blinking: 0
+  lives: 0
+  body: {fileID: 0}
+  demon: {fileID: 0}
+  particles: {fileID: 0}
+  cam: {fileID: 0}
+  liveImages: []
