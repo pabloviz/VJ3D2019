@@ -17,9 +17,10 @@ public class Spinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += (Time.deltaTime)*speed;
-        angle = time;
-        gameObject.transform.rotation = Quaternion.Euler(0, angle, 0);
+        //time += (Time.deltaTime)*speed;
+        //angle = time;
+        //gameObject.transform.rotation = Quaternion.Euler(0, angle, 0);
+        gameObject.transform.Rotate(0,0,speed);
 
     }
 }

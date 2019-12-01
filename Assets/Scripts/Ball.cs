@@ -45,6 +45,10 @@ public class Ball : MonoBehaviour
         anim["Correr_L"].speed = 30*velZ;
         anim["Correr_R"].speed = 30*velZ;
         anim["Saltar"].speed = 40*velZ;
+        anim["Saltar_F"].speed = 10*velZ;
+        anim["Saltar_L"].speed = 10*velZ;
+        anim["Saltar_R"].speed = 10*velZ;
+        anim["Victoria_idle"].speed = 5;
         ChangeAnim("Correr_F");
 
         //booleans
@@ -165,6 +169,7 @@ public class Ball : MonoBehaviour
         //already won
         if (win)
         {
+            //ChangeWaitAnim("Victoria_idle");
             if (Input.GetKeyDown("space"))
             {
                 SceneManager.LoadScene("Main Menu");
@@ -173,11 +178,20 @@ public class Ball : MonoBehaviour
     }
 
     private void ChangeAnim(string a){
+        if(win) a = "Victoria_idle";
         if (a != currentAnimation) anim.Play(a);
         currentAnimation = a;
 
     }
+/*
+    private void ChangeWaitAnim(string a){
+        if(!anim.isPlaying){
+            if (a != currentAnimation) anim.Play(a);
+            currentAnimation = a;
+        }
 
+    }
+*/
 
     //Podemos hacer que los obstáculos te dañen on collision o on trigger. Si lo hacemos on collision
     //el demonio se quedará parado por el obstáculo, yo creo que tiene más sentido si hacemos que sea
@@ -210,6 +224,7 @@ public class Ball : MonoBehaviour
         {
             rb.AddForce(0, jumpVel * 2, 0, ForceMode.Impulse);
             ChangeAnim("Saltar");
+            grounded=false;
             debug = true;
         }
     }
@@ -225,6 +240,7 @@ public class Ball : MonoBehaviour
 
         if (other.tag == "win")
         {
+            if(!win) ChangeAnim("Victoria");
             win = true;
             camScript.winCam();
             deathPlaneScript.winPlane();

@@ -9885,6 +9885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacd8c3449e0b8b4bbc9236b3882a841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 0
   velMod: 0.1
   jumpVel: 7
   blinkingFrames: 0
@@ -14709,9 +14710,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8151587885905992054}
     m_Modifications:
-    - target: {fileID: -5716681864270162303, guid: f27cf99470d068244835896ec5e1c68c,
+    - target: {fileID: -927199367670048503, guid: f27cf99470d068244835896ec5e1c68c,
         type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Name
+      value: demon
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f27cf99470d068244835896ec5e1c68c,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f27cf99470d068244835896ec5e1c68c,
@@ -14769,17 +14775,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f27cf99470d068244835896ec5e1c68c,
+    - target: {fileID: 2542210109152263593, guid: f27cf99470d068244835896ec5e1c68c,
         type: 3}
-      propertyPath: m_Name
-      value: demon
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f27cf99470d068244835896ec5e1c68c,
-        type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2542210109152263593, guid: f27cf99470d068244835896ec5e1c68c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 17c02c5d193050e478b596a95a9696b3, type: 2}
+    - target: {fileID: -5716681864270162303, guid: f27cf99470d068244835896ec5e1c68c,
         type: 3}
       propertyPath: m_Enabled
       value: 1
