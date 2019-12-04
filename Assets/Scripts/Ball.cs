@@ -23,6 +23,14 @@ public class Ball : MonoBehaviour
     Camera camScript;
     DeathPlane deathPlaneScript;
 
+    public AudioClip damage;
+    public AudioClip boing;
+    public AudioClip powerUp;
+    public AudioClip powerDown;
+    public AudioClip victory;
+
+    AudioSource source;
+
     private float sincos45 = Mathf.Sqrt(2)/2.0f;
     // Start is called before the first frame update
     void Start()
@@ -45,6 +53,10 @@ public class Ball : MonoBehaviour
         anim["Correr_L"].speed = 30*velZ;
         anim["Correr_R"].speed = 30*velZ;
         anim["Saltar"].speed = 40*velZ;
+        anim["Saltar_F"].speed = 10*velZ;
+        anim["Saltar_L"].speed = 10*velZ;
+        anim["Saltar_R"].speed = 10*velZ;
+        anim["Victoria_idle"].speed = 5;
         ChangeAnim("Correr_F");
 
         //booleans
@@ -69,6 +81,9 @@ public class Ball : MonoBehaviour
 
         //death plane
         deathPlaneScript = deathPlane.GetComponent<DeathPlane>();
+
+        //audio
+        source = gameObject.GetComponent<AudioSource>();
 
         //misc
         lives = 3;
@@ -157,7 +172,7 @@ public class Ball : MonoBehaviour
             if (time > speedDownStart + 3)
             {
                 speedDownb = false;
-                velMod += speedUpVel;
+                velMod += speedUpVel/2;
                 slowParticles.SetActive(false);
             }
         }
@@ -165,6 +180,7 @@ public class Ball : MonoBehaviour
         //already won
         if (win)
         {
+            //ChangeWaitAnim("Victoria_idle");
             if (Input.GetKeyDown("space"))
             {
                 SceneManager.LoadScene("Main Menu");
@@ -173,11 +189,20 @@ public class Ball : MonoBehaviour
     }
 
     private void ChangeAnim(string a){
+        if(win) a = "Victoria_idle";
         if (a != currentAnimation) anim.Play(a);
         currentAnimation = a;
 
     }
+/*
+    private void ChangeWaitAnim(string a){
+        if(!anim.isPlaying){
+            if (a != currentAnimation) anim.Play(a);
+            currentAnimation = a;
+        }
 
+    }
+*/
 
     //Podemos hacer que los obstáculos te dañen on collision o on trigger. Si lo hacemos on collision
     //el demonio se quedará parado por el obstáculo, yo creo que tiene más sentido si hacemos que sea
@@ -204,13 +229,16 @@ public class Ball : MonoBehaviour
                 blinking = true;
                 blinkingStart = time;
             }
+            source.PlayOneShot(damage, 1);
         }
 
         if (other.gameObject.tag == "spring")
         {
             rb.AddForce(0, jumpVel * 2, 0, ForceMode.Impulse);
             ChangeAnim("Saltar");
+            grounded=false;
             debug = true;
+            source.PlayOneShot(boing, 10);
         }
     }
 
@@ -225,12 +253,15 @@ public class Ball : MonoBehaviour
 
         if (other.tag == "win")
         {
+            if(!win) ChangeAnim("Victoria");
             win = true;
             camScript.winCam();
             deathPlaneScript.winPlane();
+            source.PlayOneShot(victory, 1);
+
         }
 
-        
+
     }
 
     public void speedUp()
@@ -242,6 +273,7 @@ public class Ball : MonoBehaviour
         speedUpb = true;
         speedUpStart = time;
         speedParticles.SetActive(true);
+        source.PlayOneShot(powerUp, 1);
     }
 
     public void speedDown()
@@ -253,6 +285,7 @@ public class Ball : MonoBehaviour
         speedDownb = true;
         speedDownStart = time;
         slowParticles.SetActive(true);
+        source.PlayOneShot(powerDown, 1);
     }
 
 }
