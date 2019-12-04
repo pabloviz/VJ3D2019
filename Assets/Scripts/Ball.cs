@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
     private Animation anim;
     string currentAnimation = "";
     public Transform body;
-    public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles;
+    public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles, winText;
     public GameObject[] liveImages;
     Camera camScript;
     DeathPlane deathPlaneScript;
@@ -84,6 +84,7 @@ public class Ball : MonoBehaviour
 
         //audio
         source = gameObject.GetComponent<AudioSource>();
+
 
         //misc
         lives = 3;
@@ -258,6 +259,8 @@ public class Ball : MonoBehaviour
             camScript.winCam();
             deathPlaneScript.winPlane();
             source.PlayOneShot(victory, 1);
+            winText.SetActive(true);
+
 
         }
 

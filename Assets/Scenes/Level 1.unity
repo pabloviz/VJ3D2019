@@ -293,6 +293,12 @@ PrefabInstance:
       propertyPath: victory
       value: 
       objectReference: {fileID: 8300000, guid: 2d9c89c270125e1458b71297e426b865, type: 3}
+    - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: fireworks.Array.data[0]
+      value: 
+      objectReference: {fileID: 2835611205365298702, guid: 8aa6a2a903a78a643b3b31360a7d94d4,
+        type: 3}
     - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -311,6 +317,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DrawHalo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 763210164, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707204635, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 96639579, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853789042, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
@@ -616,6 +643,7 @@ MonoBehaviour:
   shakeSeverity: 0
   time: 0
   timewin: 0
+  endpos: 0
 --- !u!45 &963194230
 Skybox:
   m_ObjectHideFlags: 0
@@ -875,7 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf435009bfc50244a9ecfc9c5f055a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChunks: 3
+  totalChunks: 0
   chunks:
   - {fileID: 1576538459148247488, guid: 1951f4807744a0b4d9ded201cf21e0cd, type: 3}
   - {fileID: 2835611205365298702, guid: 8aa6a2a903a78a643b3b31360a7d94d4, type: 3}

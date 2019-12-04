@@ -9,7 +9,7 @@ public class Camera : MonoBehaviour
     public GameObject ball;
     Ball ballScript;
     public bool shake, win;
-    public float shakeFrames, shakeTime, shakeSeverity, time, timewin;
+    public float shakeFrames, shakeTime, shakeSeverity, time, timewin, endpos;
     Vector3 camPosAux;
 
     // Start is called before the first frame update
@@ -25,6 +25,7 @@ public class Camera : MonoBehaviour
         shakeSeverity = 0.2f;
 
         win = false;
+        endpos = 0.0f;
     }
 
     // Update is called once per frame
@@ -50,9 +51,17 @@ public class Camera : MonoBehaviour
 
         if (win)
         {
+            float endposaux;
+            if (endpos < 0.2f)
+            {
+                endpos += 0.01f;
+                endposaux = endpos;
+            }
+            else endposaux = 0.0f;
             timewin += Time.deltaTime;
-            gameObject.transform.position = new Vector3(posBall.x + Mathf.Cos(timewin)*5, posCamera.y, posBall.z + Mathf.Sin(timewin)*5);
-            gameObject.transform.rotation = Quaternion.Euler(angle, -((timewin*360/(2*Mathf.PI))+90), 0);
+            gameObject.transform.position = new Vector3(posBall.x + Mathf.Cos(timewin)*5, posCamera.y - endposaux, posBall.z + Mathf.Sin(timewin)*5);
+            gameObject.transform.rotation = Quaternion.Euler(angle-endpos*100, -((timewin*360/(2*Mathf.PI))+90), 0);
+            
 
         }
        
