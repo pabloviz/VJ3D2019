@@ -31,7 +31,8 @@ public class Ball : MonoBehaviour
 
     AudioSource source;
 
-    private float sincos45 = Mathf.Sqrt(2)/2.0f;
+	private float sincos45 = 1.0f;/*Mathf.Sqrt(2)/2.0f;*/
+
     // Start is called before the first frame update
     void Start()
     {
@@ -235,12 +236,21 @@ public class Ball : MonoBehaviour
 
         if (other.gameObject.tag == "spring")
         {
-            rb.AddForce(0, jumpVel * 2, 0, ForceMode.Impulse);
+            rb.AddForce(0, jumpVel * 1.2f, 0, ForceMode.Impulse);
             ChangeAnim("Saltar");
             grounded=false;
             debug = true;
             source.PlayOneShot(boing, 10);
         }
+
+		if (other.gameObject.tag == "pusher")
+		{
+			Debug.Log("hola");
+			int direction = 1;
+			if (other.gameObject.transform.position.x>this.gameObject.transform.position.x) direction = -1;
+			this.gameObject.transform.Translate(0,0.5f,0);
+			rb.AddForce(direction*60,5,-2,ForceMode.Impulse);
+		}
     }
 
     private void OnTriggerEnter(Collider other)

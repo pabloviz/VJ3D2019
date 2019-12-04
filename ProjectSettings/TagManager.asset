@@ -10,6 +10,7 @@ TagManager:
   - win
   - player
   - spring
+  - pusher
   layers:
   - Default
   - TransparentFX
