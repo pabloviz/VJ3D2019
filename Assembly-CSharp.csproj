@@ -66,9 +66,12 @@
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Boulder.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Cannon.cs" />
+    <Compile Include="Assets\Scripts\CannonBall.cs" />
     <Compile Include="Assets\Scripts\ChunkManager.cs" />
     <Compile Include="Assets\Scripts\DeathPlane.cs" />
     <Compile Include="Assets\Scripts\DoorHandle.cs" />
+    <Compile Include="Assets\Scripts\DoubleJump.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\HangingSaw.cs" />
     <Compile Include="Assets\Scripts\MovingGround.cs" />

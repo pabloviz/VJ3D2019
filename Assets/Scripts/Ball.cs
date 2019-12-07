@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
-    public bool debug = false;
+    public bool debug = false, doubleJumpb;
     public float velMod, jumpVel, blinkingFrames, time, blinkingStart, speedUpVel, speedUpStart;
     public float speedDownStart;
     private float velX, velY, velZ;
@@ -20,6 +20,7 @@ public class Ball : MonoBehaviour
     public Transform body;
     public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles, winText;
     public GameObject[] liveImages;
+    public GameObject doubleJumpImage;
     Camera camScript;
     DeathPlane deathPlaneScript;
 
@@ -66,6 +67,7 @@ public class Ball : MonoBehaviour
         blinking = false;
         win = false;
         speedUpb = false;
+        doubleJumpb = false;
 
         //timing
         blinkingFrames = 2;
@@ -76,6 +78,7 @@ public class Ball : MonoBehaviour
         particles.SetActive(false);
         speedParticles.SetActive(false);
         slowParticles.SetActive(false);
+        doubleJumpImage.SetActive(false);
 
         //camera
         camScript = cam.GetComponent<Camera>();
@@ -123,10 +126,15 @@ public class Ball : MonoBehaviour
             //check for jump
             //You can only jump if you are grounded:
 
-            if (Input.GetKeyDown("space") && grounded)
+            if (Input.GetKeyDown("space") && (grounded || doubleJumpb))
             {
                 rb.AddForce(0, jumpVel, 0, ForceMode.Impulse);
                 ChangeAnim("Saltar");
+                if (doubleJumpb && !grounded)
+                {
+                    doubleJumpb = false;
+                    doubleJumpImage.SetActive(false);
+                }
                 grounded = false;
             }
 
@@ -270,8 +278,25 @@ public class Ball : MonoBehaviour
             deathPlaneScript.winPlane();
             source.PlayOneShot(victory, 1);
             winText.SetActive(true);
+        }
 
+        if (other.tag == "death" && !blinking)
+        {
+            --lives;
 
+            liveImages[lives].SetActive(false);
+
+            particles.SetActive(true);
+
+            camScript.setShake();
+
+            if (lives <= 0) dead = true;
+            else
+            {
+                blinking = true;
+                blinkingStart = time;
+            }
+            source.PlayOneShot(damage, 1);
         }
 
 
@@ -299,6 +324,14 @@ public class Ball : MonoBehaviour
         speedDownStart = time;
         slowParticles.SetActive(true);
         source.PlayOneShot(powerDown, 1);
+    }
+
+    public void doubleJump()
+    {
+        doubleJumpb = true;
+        source.PlayOneShot(powerUp, 1);
+        doubleJumpImage.SetActive(true);
+
     }
 
 }
