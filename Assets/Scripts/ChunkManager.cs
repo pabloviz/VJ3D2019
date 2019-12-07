@@ -17,8 +17,8 @@ public class ChunkManager : MonoBehaviour
         startChunk = Instantiate(startChunk) as GameObject;
         startChunk.transform.position = new Vector3(0, 0, 0);
         float last_y = 22.0f;
-        for (int i = 0; i < totalChunks; ++i)
-        {
+        for (int i = 0; i < totalChunks; ++i) { 
+        
             int j = (int)Random.Range(0, chunks.Length - 0.001f);
             GameObject ch;
             ch = Instantiate(chunks[j]) as GameObject;
@@ -28,6 +28,7 @@ public class ChunkManager : MonoBehaviour
             //Debug.Log(chunkCenter);
             ch.transform.position = new Vector3(0, 0, last_y);// + chunkCenter);
             last_y += chunkLength;
+            if (ch.tag == "no-ground") ch.transform.Find("Ground").gameObject.SetActive(false);
         }
 
         endChunk = Instantiate(endChunk) as GameObject;
