@@ -9967,7 +9967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debug: 0
-  velMod: 0.1
+  velMod: 0.2
   jumpVel: 7
   blinkingFrames: 0
   time: 0
@@ -9994,11 +9994,6 @@ MonoBehaviour:
   - {fileID: 763210164}
   - {fileID: 1707204635}
   - {fileID: 96639579}
-  fireworks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   damage: {fileID: 0}
   boing: {fileID: 0}
   powerUp: {fileID: 0}

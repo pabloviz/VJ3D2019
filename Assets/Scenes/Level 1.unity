@@ -304,6 +304,11 @@ PrefabInstance:
       propertyPath: jumpVel
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: velMod
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -674,7 +679,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 109f3678875cc4b4293d8c0a8c9b73c5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0

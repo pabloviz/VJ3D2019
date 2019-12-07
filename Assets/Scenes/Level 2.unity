@@ -329,6 +329,11 @@ PrefabInstance:
       propertyPath: jumpVel
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: velMod
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -746,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalChunks: 5
   chunks:
-  - {fileID: 7425328278656488033, guid: bdab4d7ffdb30dd48a344e8461a68eb8, type: 3}
+  - {fileID: 8995314612651885505, guid: 51b5e03319510f9489da8c5765fe202e, type: 3}
   startChunk: {fileID: 1372847528001584838, guid: 0509a8ee3a18a7c418efd64296b139c4,
     type: 3}
   endChunk: {fileID: 7225872443887817015, guid: 7c3c3605a9d87f04c91420348efb882d,
