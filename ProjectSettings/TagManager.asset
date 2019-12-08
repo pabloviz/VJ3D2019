@@ -12,6 +12,8 @@ TagManager:
   - spring
   - pusher
   - no-ground
+  - speedup
+  - speeddown
   layers:
   - Default
   - TransparentFX

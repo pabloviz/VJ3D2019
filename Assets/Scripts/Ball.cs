@@ -254,15 +254,7 @@ public class Ball : MonoBehaviour
             }
             source.PlayOneShot(damage, 1);
         }
-
-        if (other.gameObject.tag == "spring")
-        {
-            rb.AddForce(0, jumpVel * 1.2f, 0, ForceMode.Impulse);
-            ChangeAnim("Saltar");
-            grounded=false;
-            debug = true;
-            source.PlayOneShot(boing, 10);
-        }
+			
 
 		if (other.gameObject.tag == "pusher")
 		{
@@ -277,7 +269,17 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "deathBound")
+		if (other.tag == "speedup"){
+			speedUp();
+			Destroy(other.gameObject);
+		}
+
+		if (other.tag == "speeddown"){
+			speedDown();
+			Destroy(other.gameObject);
+		}
+
+		if (other.tag == "deathBound")
         {
             lives = 0;
             dead = true;
@@ -316,6 +318,16 @@ public class Ball : MonoBehaviour
             }
             source.PlayOneShot(damage, 1);
         }
+
+		if (other.gameObject.tag == "spring")
+		{
+			rb.AddForce(0, jumpVel * 1.2f, 0.5f, ForceMode.Impulse);
+			other.gameObject.GetComponent<Animation>().Play("push");
+			ChangeAnim("Saltar");
+			grounded=false;
+			debug = true;
+			source.PlayOneShot(boing, 10);
+		}
 
 
     }
