@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+    public int level;
     public bool debug = false, doubleJumpb;
     public float velMod, jumpVel, blinkingFrames, time, blinkingStart, speedUpVel, speedUpStart;
     public float speedDownStart;
@@ -18,7 +19,7 @@ public class Ball : MonoBehaviour
     private Animation anim;
     string currentAnimation = "";
     public Transform body;
-    public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles, winText;
+    public GameObject demon, particles, cam, deathPlane, speedParticles, slowParticles, winText, deathText;
     public GameObject[] liveImages;
     public GameObject doubleJumpImage;
     Camera camScript;
@@ -193,6 +194,18 @@ public class Ball : MonoBehaviour
             //ChangeWaitAnim("Victoria_idle");
             if (Input.GetKeyDown("space"))
             {
+                if (level == 1)
+                SceneManager.LoadScene("Level 2");
+                if (level == 2)
+                SceneManager.LoadScene("Main Menu");
+            }
+        }
+
+        //already dead
+        if (dead)
+        {
+            if (Input.GetKeyDown("space"))
+            {
                 SceneManager.LoadScene("Main Menu");
             }
         }
@@ -268,6 +281,7 @@ public class Ball : MonoBehaviour
         {
             lives = 0;
             dead = true;
+            deathText.SetActive(true);
         }
 
         if (other.tag == "win")
@@ -290,7 +304,11 @@ public class Ball : MonoBehaviour
 
             camScript.setShake();
 
-            if (lives <= 0) dead = true;
+            if (lives <= 0)
+            {
+                dead = true;
+                deathText.SetActive(true);
+            }
             else
             {
                 blinking = true;
