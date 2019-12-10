@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
     float deathVel;
     Rigidbody rb;
     Renderer rend;
-    public bool grounded, dead, blinking, win, speedUpb, speedDownb;
+    public bool grounded, dead, blinking, win, speedUpb, speedDownb, conveyor;
     public int lives;
     private Animation anim;
     string currentAnimation = "";
@@ -217,16 +217,29 @@ public class Ball : MonoBehaviour
         currentAnimation = a;
 
     }
-/*
-    private void ChangeWaitAnim(string a){
-        if(!anim.isPlaying){
-            if (a != currentAnimation) anim.Play(a);
-            currentAnimation = a;
+    /*
+        private void ChangeWaitAnim(string a){
+            if(!anim.isPlaying){
+                if (a != currentAnimation) anim.Play(a);
+                currentAnimation = a;
+            }
+
+        }
+    */
+
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.tag == "bconveyor")
+        {
+            rb.AddForce(0, 0, -3.0f, ForceMode.Impulse);
         }
 
+        if (other.gameObject.tag == "fconveyor")
+        {
+            rb.AddForce(0, 0, 3.0f, ForceMode.Impulse);
+        }
     }
-*/
-
     //Podemos hacer que los obstáculos te dañen on collision o on trigger. Si lo hacemos on collision
     //el demonio se quedará parado por el obstáculo, yo creo que tiene más sentido si hacemos que sea
     //on trigger
@@ -328,6 +341,8 @@ public class Ball : MonoBehaviour
 			debug = true;
 			source.PlayOneShot(boing, 10);
 		}
+
+        
 
 
     }

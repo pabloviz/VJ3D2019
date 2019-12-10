@@ -642,6 +642,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4458391078455924388}
     m_Modifications:
+    - target: {fileID: 4486094196532710177, guid: c7347ad37f9af3043ab8ca699ff232fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486094196532710177, guid: c7347ad37f9af3043ab8ca699ff232fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4486094196532710178, guid: c7347ad37f9af3043ab8ca699ff232fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -695,16 +705,6 @@ PrefabInstance:
     - target: {fileID: 4486094196532710178, guid: c7347ad37f9af3043ab8ca699ff232fa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486094196532710177, guid: c7347ad37f9af3043ab8ca699ff232fa,
-        type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486094196532710177, guid: c7347ad37f9af3043ab8ca699ff232fa,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4486094196337822689, guid: c7347ad37f9af3043ab8ca699ff232fa,
@@ -1367,6 +1367,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4458391078455924388}
     m_Modifications:
+    - target: {fileID: 6005688669940657157, guid: 809be3bb274e7e64ab1cbb659c7c23b5,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw
+      objectReference: {fileID: 0}
     - target: {fileID: 7572135821693482991, guid: 809be3bb274e7e64ab1cbb659c7c23b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,11 +1427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6005688669940657157, guid: 809be3bb274e7e64ab1cbb659c7c23b5,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw
-      objectReference: {fileID: 0}
     - target: {fileID: 4826564646254167222, guid: 809be3bb274e7e64ab1cbb659c7c23b5,
         type: 3}
       propertyPath: speed
@@ -1455,6 +1455,11 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 7ed2f58f02ac1d04e92432e36cccf756,
         type: 3}
       propertyPath: m_Name
+      value: speeddown
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7ed2f58f02ac1d04e92432e36cccf756,
+        type: 3}
+      propertyPath: m_TagString
       value: speeddown
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7ed2f58f02ac1d04e92432e36cccf756,
@@ -1548,6 +1553,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4458391078455924388}
     m_Modifications:
+    - target: {fileID: 6407213378164105500, guid: a07e44bad50134a41ae0a6b58cf052d9,
+        type: 3}
+      propertyPath: m_Name
+      value: Spikes
+      objectReference: {fileID: 0}
     - target: {fileID: 3460353745100870358, guid: a07e44bad50134a41ae0a6b58cf052d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1602,11 +1612,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407213378164105500, guid: a07e44bad50134a41ae0a6b58cf052d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Spikes
       objectReference: {fileID: 0}
     - target: {fileID: 8813260021769582325, guid: a07e44bad50134a41ae0a6b58cf052d9,
         type: 3}
