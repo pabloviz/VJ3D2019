@@ -7,6 +7,8 @@ public class ChunkManager : MonoBehaviour
     private float chunkCenter;
     private float chunkLength;
     public int totalChunks;
+	public float iniOffset = 0.0f;
+	public float finOffset = 0.0f;
     public GameObject[] chunks;
     public GameObject startChunk;
     public GameObject endChunk;
@@ -16,7 +18,7 @@ public class ChunkManager : MonoBehaviour
         
         startChunk = Instantiate(startChunk) as GameObject;
         startChunk.transform.position = new Vector3(0, 0, 0);
-        float last_y = 22.0f;
+        float last_y = iniOffset;
         for (int i = 0; i < totalChunks; ++i) { 
         
             int j = (int)Random.Range(0, chunks.Length - 0.001f);
@@ -32,7 +34,7 @@ public class ChunkManager : MonoBehaviour
         }
 
         endChunk = Instantiate(endChunk) as GameObject;
-        endChunk.transform.position = new Vector3(0, 0, last_y + 18.6f);
+        endChunk.transform.position = new Vector3(0, 0, last_y + finOffset);
     }
 
     // Update is called once per frame

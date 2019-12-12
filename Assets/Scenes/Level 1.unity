@@ -371,12 +371,12 @@ PrefabInstance:
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: jumpVel
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: velMod
-      value: 0.1
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
@@ -992,6 +992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalChunks: 5
+  iniOffset: 22
+  finOffset: 18.6
   chunks:
   - {fileID: 1576538459148247488, guid: 1951f4807744a0b4d9ded201cf21e0cd, type: 3}
   - {fileID: 2835611205365298702, guid: 8aa6a2a903a78a643b3b31360a7d94d4, type: 3}

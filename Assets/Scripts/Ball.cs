@@ -334,7 +334,7 @@ public class Ball : MonoBehaviour
 
 		if (other.gameObject.tag == "spring")
 		{
-			rb.AddForce(0, jumpVel * 1.2f, 0.5f, ForceMode.Impulse);
+			rb.AddForce(0, jumpVel * 1.4f, 2.0f, ForceMode.Impulse);
 			other.gameObject.GetComponent<Animation>().Play("push");
 			ChangeAnim("Saltar");
 			grounded=false;
