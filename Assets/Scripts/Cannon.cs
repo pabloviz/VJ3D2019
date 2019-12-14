@@ -6,6 +6,7 @@ public class Cannon : MonoBehaviour
 {
     public GameObject cannonBall;
     public float time;
+    public bool left;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,17 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 2)
+        if (time > 0.6f)
         {
             GameObject cb = cannonBall;
+            CannonBall cbScript = cb.GetComponent<CannonBall>();
+            cbScript.left = left;
             time = 0;
-            Instantiate(cb);
-            cb.transform.position = gameObject.transform.position;
+            GameObject g = Instantiate(cb);
+            g.transform.position = gameObject.transform.position;
+			if (left) g.GetComponent<Rigidbody>().AddForce(-20.0f,3.0f,0.0f,ForceMode.Impulse);
+            else g.GetComponent<Rigidbody>().AddForce(20.0f, 3.0f, 0.0f, ForceMode.Impulse);
+            Destroy(g,5);
         }
     }
 }

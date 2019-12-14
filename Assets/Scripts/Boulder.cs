@@ -17,6 +17,6 @@ public class Boulder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.z >= gameObject.transform.position.z - 5) rb.useGravity = true;
+        if (player.transform.position.z >= gameObject.transform.position.z - 5.0f) rb.useGravity = true;
     }
 }

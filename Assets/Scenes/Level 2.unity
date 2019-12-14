@@ -216,7 +216,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.9009434, g: 0.98710775, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -833,13 +833,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf435009bfc50244a9ecfc9c5f055a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChunks: 5
+  totalChunks: 8
   iniOffset: 30
   finOffset: 16
   chunks:
   - {fileID: 3876752956905680891, guid: bf88b8d774c9a2442adddbdeff3cccf4, type: 3}
   - {fileID: 8209915245769989166, guid: 7a1b12139b19be44b8493f3a204a7b5d, type: 3}
   - {fileID: 7425328278656488033, guid: bdab4d7ffdb30dd48a344e8461a68eb8, type: 3}
+  - {fileID: 6108648414496166124, guid: 1a48e128f0546224a85a630b626aa9ea, type: 3}
   startChunk: {fileID: 1372847528001584838, guid: 0509a8ee3a18a7c418efd64296b139c4,
     type: 3}
   endChunk: {fileID: 7225872443887817015, guid: 7c3c3605a9d87f04c91420348efb882d,
