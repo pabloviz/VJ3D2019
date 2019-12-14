@@ -216,7 +216,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -435,8 +435,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalChunks: 5
+  iniOffset: 0
+  finOffset: 0
   chunks:
-  - {fileID: 3054799727464577554, guid: 61935196103ea024891f263f2043c748, type: 3}
+  - {fileID: 469730856327094330, guid: 76ef6fd16694b6e4e9b9c1f9f12cc32f, type: 3}
   startChunk: {fileID: 7089679754334649453, guid: 1f75a329861e875439e596cfcb4660d4,
     type: 3}
   endChunk: {fileID: 6313652393363195201, guid: 39b792e02f4dd434d9073654f8150a40,
@@ -579,8 +581,8 @@ Skybox:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695486637}
-  m_Enabled: 0
-  m_CustomSkybox: {fileID: 2100000, guid: 0a9a7826229038e47b567d3adb4b817a, type: 2}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 49830c8486de5be4093541f034861035, type: 2}
 --- !u!114 &1695486640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,17 +853,17 @@ PrefabInstance:
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: jumpVel
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: velMod
-      value: 0.1
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: level
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Camera

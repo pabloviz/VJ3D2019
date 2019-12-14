@@ -16,12 +16,14 @@ public class Cannon : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 2)
+        if (time > 0.6f)
         {
             GameObject cb = cannonBall;
             time = 0;
-            Instantiate(cb);
-            cb.transform.position = gameObject.transform.position;
+            GameObject g = Instantiate(cb);
+            g.transform.position = gameObject.transform.position;
+			g.GetComponent<Rigidbody>().AddForce(-20.0f,3.0f,0.0f,ForceMode.Impulse);
+			Destroy(g,5);
         }
     }
 }

@@ -244,10 +244,11 @@ public class Ball : MonoBehaviour
     //el demonio se quedará parado por el obstáculo, yo creo que tiene más sentido si hacemos que sea
     //on trigger
     private void OnCollisionEnter(Collision other){
-        if (other.gameObject.tag == "ground")
-        {
-            grounded = true;
-        }
+
+		if (other.gameObject.tag == "ground")
+		{
+			grounded = true;
+		}
 
         if (other.gameObject.tag == "death" && !blinking)
         {
@@ -278,9 +279,21 @@ public class Ball : MonoBehaviour
 			rb.AddForce(direction*60,5,-2,ForceMode.Impulse);
 		}
     }
+	/*
+	private void OnTriggerExit(Collider other){
+		if (other.tag == "ground")
+		{
+			grounded = false;
+		}
+	}*/
 
     private void OnTriggerEnter(Collider other)
     {
+		if (other.tag == "ground")
+		{
+			grounded = true;
+		}
+
 
 		if (other.tag == "speedup"){
 			speedUp();
