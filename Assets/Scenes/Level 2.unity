@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.08
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 26bbd0131cdcb96409f77ebf227e6148, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 938eda2c2f0f643428b65ae4e7c688df, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -452,6 +452,16 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5144141616020698604, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921461942476498380, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
@@ -611,9 +621,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 109f3678875cc4b4293d8c0a8c9b73c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2429ff8190e685f4c85ca0b3b37d2586, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.512
   m_Pitch: 1
   Loop: 1
   Mute: 0
