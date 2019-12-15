@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Ball : MonoBehaviour
 {
     public int level;
-    public bool debug = false, doubleJumpb;
+    public bool debug = false, doubleJumpb, god;
     public float velMod, jumpVel, blinkingFrames, time, blinkingStart, speedUpVel, speedUpStart;
     public float speedDownStart;
     private float velX, velY, velZ;
@@ -69,6 +69,7 @@ public class Ball : MonoBehaviour
         win = false;
         speedUpb = false;
         doubleJumpb = false;
+        god = false;
 
         //timing
         blinkingFrames = 2;
@@ -138,6 +139,12 @@ public class Ball : MonoBehaviour
                 }
                 grounded = false;
             }
+            
+            if (Input.GetKeyDown("f"))
+            {
+                blinking = true;
+                god = true;
+            }
 
             //gameObject.transform.position = gameObject.transform.position + new Vector3(velX, velY, velZ);
             if (!win) transform.Translate(velX,velY,velZ);
@@ -158,7 +165,7 @@ public class Ball : MonoBehaviour
         {
             if (rend.enabled == false) rend.enabled = true;
             else rend.enabled = false;
-            if (time - blinkingStart >= blinkingFrames)
+            if ((time - blinkingStart >= blinkingFrames) && !god)
             {
                 rend.enabled = true;
                 blinking = false;
@@ -254,7 +261,7 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.tag == "bconveyor")
         {
-            rb.AddForce(0, 0, -3.0f, ForceMode.Impulse);
+            rb.AddForce(0, 0, -3.5f, ForceMode.Impulse);
         }
 
         if (other.gameObject.tag == "fconveyor")
@@ -326,6 +333,12 @@ public class Ball : MonoBehaviour
 			speedDown();
 			Destroy(other.gameObject);
 		}
+
+        if (other.tag == "doublejump")
+        {
+            doubleJump();
+            Destroy(other.gameObject);
+        }
 
 		if (other.tag == "deathBound")
         {

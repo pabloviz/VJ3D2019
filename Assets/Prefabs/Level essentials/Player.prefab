@@ -5159,6 +5159,7 @@ GameObject:
   - component: {fileID: 8770262502938710971}
   - component: {fileID: 5039980227779332629}
   - component: {fileID: 2838368005090655541}
+  - component: {fileID: 7421903228244279819}
   m_Layer: 5
   m_Name: winText
   m_TagString: Untagged
@@ -5228,6 +5229,21 @@ MonoBehaviour:
 
 
     Press jump to continue'
+--- !u!114 &7421903228244279819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227376439571244398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3338333982050518833
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,6 +10126,7 @@ GameObject:
   - component: {fileID: 6537434857535584385}
   - component: {fileID: 7761598261451642391}
   - component: {fileID: 7539492944108579654}
+  - component: {fileID: 4734543727209846029}
   m_Layer: 5
   m_Name: deathText
   m_TagString: Untagged
@@ -10179,6 +10196,21 @@ MonoBehaviour:
 
 
     Press jump to exit'
+--- !u!114 &4734543727209846029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018408222977290327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8151587885905992043
 GameObject:
   m_ObjectHideFlags: 0

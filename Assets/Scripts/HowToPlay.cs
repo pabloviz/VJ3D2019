@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+
+public class HowToPlay : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,15 +15,9 @@ public class StartButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void Level1() {
-        SceneManager.LoadScene("Level 1");
-    }
-
-    public void HowToPlay()
-    {
-        SceneManager.LoadScene("How to play");
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 }

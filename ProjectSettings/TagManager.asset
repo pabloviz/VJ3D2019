@@ -16,6 +16,7 @@ TagManager:
   - speeddown
   - bconveyor
   - fconveyor
+  - doublejump
   layers:
   - Default
   - TransparentFX
