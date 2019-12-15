@@ -29,7 +29,7 @@ public class DeathPlane : MonoBehaviour
         }
         else
         {
-            if (!win) gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0, velZ);
+            if (!win && !playerScript.dead) gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0, velZ);
         }
 
     }

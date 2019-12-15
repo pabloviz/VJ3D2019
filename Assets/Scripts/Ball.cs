@@ -30,6 +30,7 @@ public class Ball : MonoBehaviour
     public AudioClip powerUp;
     public AudioClip powerDown;
     public AudioClip victory;
+    public AudioClip deathSFX;
 
     AudioSource source;
 
@@ -345,6 +346,8 @@ public class Ball : MonoBehaviour
             lives = 0;
             dead = true;
             deathText.SetActive(true);
+            source.PlayOneShot(deathSFX, 1);
+
         }
 
         if (other.tag == "win")
@@ -372,6 +375,8 @@ public class Ball : MonoBehaviour
             {
                 dead = true;
                 deathText.SetActive(true);
+                source.PlayOneShot(deathSFX, 1);
+
             }
             else
             {

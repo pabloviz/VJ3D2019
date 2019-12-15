@@ -10264,6 +10264,7 @@ MonoBehaviour:
   level: 0
   debug: 0
   doubleJumpb: 0
+  god: 0
   velMod: 0.2
   jumpVel: 7
   blinkingFrames: 0
@@ -10284,7 +10285,8 @@ MonoBehaviour:
   demon: {fileID: 1761335666545493961}
   particles: {fileID: 1452865896}
   cam: {fileID: 0}
-  deathPlane: {fileID: 0}
+  deathPlane: {fileID: 8891818268273213739, guid: 605adf52a842be240815268d3ed0ca53,
+    type: 3}
   speedParticles: {fileID: 6148783365284724683}
   slowParticles: {fileID: 8955789254536715753}
   winText: {fileID: 2227376439571244398}
@@ -10294,11 +10296,12 @@ MonoBehaviour:
   - {fileID: 1707204635}
   - {fileID: 96639579}
   doubleJumpImage: {fileID: 2120010679149518772}
-  damage: {fileID: 0}
-  boing: {fileID: 0}
-  powerUp: {fileID: 0}
-  powerDown: {fileID: 0}
-  victory: {fileID: 0}
+  damage: {fileID: 8300000, guid: 899670d5d66f43447be889ec8b281b46, type: 3}
+  boing: {fileID: 8300000, guid: 5960b00d85b5fcc41bde3b6410c59c22, type: 3}
+  powerUp: {fileID: 8300000, guid: fac9fc9eef4f4774d903f683f2984355, type: 3}
+  powerDown: {fileID: 8300000, guid: d29001da45f8d6741ba5160c72da909c, type: 3}
+  victory: {fileID: 8300000, guid: 2d9c89c270125e1458b71297e426b865, type: 3}
+  deathSFX: {fileID: 8300000, guid: 760855fa2620ca640a8a6d328ab1504a, type: 3}
 --- !u!54 &587409026
 Rigidbody:
   m_ObjectHideFlags: 0
