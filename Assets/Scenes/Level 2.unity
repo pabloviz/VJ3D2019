@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velZ: 0.1
-  angle: 45
+  angle: 30
   ball: {fileID: 1991191588}
   shake: 0
   win: 0
@@ -841,6 +841,7 @@ MonoBehaviour:
   - {fileID: 8209915245769989166, guid: 7a1b12139b19be44b8493f3a204a7b5d, type: 3}
   - {fileID: 7425328278656488033, guid: bdab4d7ffdb30dd48a344e8461a68eb8, type: 3}
   - {fileID: 6108648414496166124, guid: 1a48e128f0546224a85a630b626aa9ea, type: 3}
+  - {fileID: 6363844764742760806, guid: 5617ffa3d95695842876a7139f5e282f, type: 3}
   startChunk: {fileID: 1372847528001584838, guid: 0509a8ee3a18a7c418efd64296b139c4,
     type: 3}
   endChunk: {fileID: 7225872443887817015, guid: 7c3c3605a9d87f04c91420348efb882d,

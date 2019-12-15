@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\HangingSaw.cs" />
      <Compile Include="Assets\Scripts\HowToPlay.cs" />
+     <Compile Include="Assets\Scripts\MovingCloud.cs" />
      <Compile Include="Assets\Scripts\MovingGround.cs" />
      <Compile Include="Assets\Scripts\Pusher.cs" />
      <Compile Include="Assets\Scripts\Saw.cs" />

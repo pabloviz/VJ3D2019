@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velZ: 0.1
-  angle: 45
+  angle: 40
   ball: {fileID: 587409021}
   shake: 0
   win: 0
