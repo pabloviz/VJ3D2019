@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\DeathPlane.cs" />
     <Compile Include="Assets\Scripts\DoorHandle.cs" />
     <Compile Include="Assets\Scripts\DoubleJump.cs" />
+    <Compile Include="Assets\Scripts\Ending.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\HangingSaw.cs" />
     <Compile Include="Assets\Scripts\HowToPlay.cs" />

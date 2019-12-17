@@ -207,7 +207,7 @@ public class Ball : MonoBehaviour
                 if (level == 2)
                     SceneManager.LoadScene("Level 3");
                 if (level == 3)
-                    SceneManager.LoadScene("Main Menu");
+                    SceneManager.LoadScene("Ending");
             }
         }
 
@@ -238,6 +238,10 @@ public class Ball : MonoBehaviour
         if (Input.GetKeyDown("3"))
         {
             SceneManager.LoadScene("Level 3");
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            SceneManager.LoadScene("Ending");
         }
     }
 

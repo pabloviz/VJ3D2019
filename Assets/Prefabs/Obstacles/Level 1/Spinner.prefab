@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2698269721212042538}
+  - component: {fileID: 6059568062834279788}
   - component: {fileID: 2698269721212042539}
   - component: {fileID: 2698269721212042540}
   m_Layer: 0
@@ -33,6 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &6059568062834279788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698269721212042542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8445ef5091cb91e4191e8be20272ae4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  time: 0
+  angle: 0
 --- !u!33 &2698269721212042539
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -126,19 +142,6 @@ MonoBehaviour:
   speed: 0
   time: 0
   angle: 0
---- !u!65 &6748719665205731205
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6588907398844521293}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.04579166, y: 0.009246241, z: 0.0008020985}
-  m_Center: {x: -0.000023551285, y: -0.00006316534, z: 0.000010492051}
 --- !u!65 &2067092918038225913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151,6 +154,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.008157916, y: 0.009246241, z: 0.008020985}
+  m_Center: {x: -0.000023551285, y: -0.00006316534, z: 0.000010492051}
+--- !u!65 &6748719665205731205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588907398844521293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04579166, y: 0.009246241, z: 0.0008020985}
   m_Center: {x: -0.000023551285, y: -0.00006316534, z: 0.000010492051}
 --- !u!1001 &2905223393993114180
 PrefabInstance:
