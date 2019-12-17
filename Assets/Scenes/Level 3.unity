@@ -435,10 +435,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalChunks: 5
-  iniOffset: 32
-  finOffset: 0
+  iniOffset: 38
+  finOffset: 12
   chunks:
+  - {fileID: 469730856327094330, guid: 76ef6fd16694b6e4e9b9c1f9f12cc32f, type: 3}
   - {fileID: 7091900263190898, guid: 30a8e6a05fa1923419e204658ed38089, type: 3}
+  - {fileID: 1551629786921247331, guid: 65d49240778fb374c9c0d9c8b308c8a2, type: 3}
+  - {fileID: 2955300948509186855, guid: 9589ec86aef0db748aedcb9cc0741591, type: 3}
   startChunk: {fileID: 7089679754334649453, guid: 1f75a329861e875439e596cfcb4660d4,
     type: 3}
   endChunk: {fileID: 6313652393363195201, guid: 39b792e02f4dd434d9073654f8150a40,
@@ -596,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velZ: 0.1
-  angle: 45
+  angle: 30
   ball: {fileID: 2074089932}
   shake: 0
   win: 0
