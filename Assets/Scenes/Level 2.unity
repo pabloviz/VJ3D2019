@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: jumpVel
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
@@ -408,24 +408,14 @@ PrefabInstance:
       propertyPath: level
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1767692505}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
+    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Mass
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_DrawHalo
-      value: 0
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 763210164, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Layer
@@ -443,15 +433,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1767692505}
     - target: {fileID: 5144141616020698604, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: level
@@ -461,6 +446,21 @@ PrefabInstance:
         type: 3}
       propertyPath: level
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
@@ -664,8 +664,8 @@ Skybox:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767692500}
-  m_Enabled: 0
-  m_CustomSkybox: {fileID: 2100000, guid: 0a9a7826229038e47b567d3adb4b817a, type: 2}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 49830c8486de5be4093541f034861035, type: 2}
 --- !u!114 &1767692503
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -132,11 +132,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3367372874754922334}
     m_Modifications:
-    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl3
-      objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -145,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 7.57
       objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
@@ -191,6 +186,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535925156164937933, guid: b7037bb5a20196d4ebe85662ac83a061,
+        type: 3}
+      propertyPath: time
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7037bb5a20196d4ebe85662ac83a061, type: 3}
@@ -363,11 +368,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3367372874754922334}
     m_Modifications:
-    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl3 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -376,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
@@ -423,6 +423,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl3 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 3535925156164937933, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: angle
@@ -443,11 +448,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3367372874754922334}
     m_Modifications:
-    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl3 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 1944682722843204500, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
@@ -503,10 +503,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2355727635532923006, guid: b7037bb5a20196d4ebe85662ac83a061,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl3 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 3535925156164937933, guid: b7037bb5a20196d4ebe85662ac83a061,
         type: 3}
       propertyPath: angle
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535925156164937933, guid: b7037bb5a20196d4ebe85662ac83a061,
+        type: 3}
+      propertyPath: time
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7037bb5a20196d4ebe85662ac83a061, type: 3}
@@ -523,11 +533,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3367372874754922334}
     m_Modifications:
-    - target: {fileID: 7326409467044964491, guid: 0de37ac376e761d44a2f8ea420863fc7,
-        type: 3}
-      propertyPath: m_Name
-      value: speedUp_lvl3
-      objectReference: {fileID: 0}
     - target: {fileID: 7326409467044964487, guid: 0de37ac376e761d44a2f8ea420863fc7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,6 +587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326409467044964491, guid: 0de37ac376e761d44a2f8ea420863fc7,
+        type: 3}
+      propertyPath: m_Name
+      value: speedUp_lvl3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de37ac376e761d44a2f8ea420863fc7, type: 3}

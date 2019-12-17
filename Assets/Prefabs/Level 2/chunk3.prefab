@@ -262,11 +262,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
-        type: 3}
-      propertyPath: m_Name
-      value: spikes_cover 1 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1068401362000868826, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -331,6 +326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 99.99991
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
+        type: 3}
+      propertyPath: m_Name
+      value: spikes_cover 1 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef27f1b13e8ea44ea6a5e43a7014906, type: 3}
@@ -442,11 +442,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6483808711808806610, guid: caf5b9fafbaeb5d46ab32d782de1336e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,9 +497,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8220716644869004683, guid: caf5b9fafbaeb5d46ab32d782de1336e,
         type: 3}
       propertyPath: angle
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220716644869004683, guid: caf5b9fafbaeb5d46ab32d782de1336e,
+        type: 3}
+      propertyPath: time
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -717,11 +722,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6483808711808806610, guid: caf5b9fafbaeb5d46ab32d782de1336e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -777,10 +777,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 8220716644869004683, guid: caf5b9fafbaeb5d46ab32d782de1336e,
         type: 3}
       propertyPath: angle
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220716644869004683, guid: caf5b9fafbaeb5d46ab32d782de1336e,
+        type: 3}
+      propertyPath: time
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf5b9fafbaeb5d46ab32d782de1336e, type: 3}
@@ -1162,21 +1172,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
-        type: 3}
-      propertyPath: m_Name
-      value: Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
-        type: 3}
-      propertyPath: m_TagString
-      value: ground
-      objectReference: {fileID: 0}
     - target: {fileID: 6015642191154277289, guid: 8beb35591224d1c4f891a08be3bcf54b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1241,6 +1236,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 229.58978
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
+        type: 3}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286968695690926522, guid: 8beb35591224d1c4f891a08be3bcf54b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8beb35591224d1c4f891a08be3bcf54b, type: 3}
@@ -1353,11 +1363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
-        type: 3}
-      propertyPath: m_Name
-      value: spikes_cover 1 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1068401362000868826, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,6 +1427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 99.99991
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
+        type: 3}
+      propertyPath: m_Name
+      value: spikes_cover 1 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef27f1b13e8ea44ea6a5e43a7014906, type: 3}
@@ -1603,11 +1613,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
-        type: 3}
-      propertyPath: m_Name
-      value: HangingSaw_lvl2
-      objectReference: {fileID: 0}
     - target: {fileID: 6483808711808806610, guid: caf5b9fafbaeb5d46ab32d782de1336e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1663,6 +1668,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7185144403031766328, guid: caf5b9fafbaeb5d46ab32d782de1336e,
+        type: 3}
+      propertyPath: m_Name
+      value: HangingSaw_lvl2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf5b9fafbaeb5d46ab32d782de1336e, type: 3}
 --- !u!4 &417666538737890471 stripped
@@ -1678,11 +1688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8616612579122141160}
     m_Modifications:
-    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
-        type: 3}
-      propertyPath: m_Name
-      value: spikes_cover 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1068401362000868826, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1747,6 +1752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 99.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073752944439986121, guid: 7ef27f1b13e8ea44ea6a5e43a7014906,
+        type: 3}
+      propertyPath: m_Name
+      value: spikes_cover 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef27f1b13e8ea44ea6a5e43a7014906, type: 3}

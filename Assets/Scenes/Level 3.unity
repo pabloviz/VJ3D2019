@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: jumpVel
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
@@ -823,24 +823,14 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1695486642}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
+    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Mass
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_DrawHalo
-      value: 0
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 763210164, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Layer
@@ -858,15 +848,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1695486642}
     - target: {fileID: 5144141616020698604, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: level
@@ -876,6 +861,21 @@ PrefabInstance:
         type: 3}
       propertyPath: level
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
@@ -896,7 +896,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d534b54b8e99f2a4da8775893b16cbb2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6d801149acea68e4a9da02fdc9e69a7b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

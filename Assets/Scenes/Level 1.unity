@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.40837112, g: 0.22665441, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.56850463, g: 0.31263244, b: 0.018599277, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: jumpVel
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8151587885905992042, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
@@ -452,24 +452,14 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
+    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Mass
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
-      propertyPath: m_BounceIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_DrawHalo
-      value: 0
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 763210164, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
       propertyPath: m_Layer
@@ -487,15 +477,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 2227376439571244398, guid: d7bca4121bb8cb248b392b902bb5b13e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 587409026, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 1853789046, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 5144141616020698604, guid: d7bca4121bb8cb248b392b902bb5b13e,
         type: 3}
       propertyPath: level
@@ -505,6 +490,21 @@ PrefabInstance:
         type: 3}
       propertyPath: level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9163343729164677897, guid: d7bca4121bb8cb248b392b902bb5b13e, type: 3}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velZ: 0.1
-  angle: 40
+  angle: 30
   ball: {fileID: 587409021}
   shake: 0
   win: 0
@@ -818,7 +818,7 @@ Skybox:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 0a9a7826229038e47b567d3adb4b817a, type: 2}
 --- !u!82 &963194231
 AudioSource:

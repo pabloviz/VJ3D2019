@@ -704,15 +704,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3
+      value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -764,6 +759,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
@@ -784,11 +784,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -802,7 +797,7 @@ PrefabInstance:
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.99
+      value: -24.46
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -844,6 +839,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
@@ -864,15 +864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3
+      value: -5.31
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -924,6 +919,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
@@ -944,11 +944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1004,6 +999,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
@@ -1024,15 +1024,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.06
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -1084,6 +1079,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
@@ -1104,15 +1104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.48
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -1122,7 +1117,7 @@ PrefabInstance:
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -1164,12 +1159,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3 (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8840987764242187333, guid: 3eec87c98d72a074488b723813d02a63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3eec87c98d72a074488b723813d02a63, type: 3}
 --- !u!4 &2830005428688313349 stripped
 Transform:
@@ -1184,15 +1185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89167087182081091}
     m_Modifications:
-    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
-        type: 3}
-      propertyPath: m_Name
-      value: Spinner_lvl3
-      objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.6
+      value: 4.64
       objectReference: {fileID: 0}
     - target: {fileID: 2126466865280001689, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
@@ -1243,6 +1239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126466865280001693, guid: 3eec87c98d72a074488b723813d02a63,
+        type: 3}
+      propertyPath: m_Name
+      value: Spinner_lvl3
       objectReference: {fileID: 0}
     - target: {fileID: 4257031352289025959, guid: 3eec87c98d72a074488b723813d02a63,
         type: 3}
