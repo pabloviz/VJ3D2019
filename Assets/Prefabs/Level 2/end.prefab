@@ -9506,19 +9506,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!65 &7726529934544478832
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3736102617968676411}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.02, z: 0.08004493}
-  m_Center: {x: -0.00008467584, y: 0.0028, z: -0.036022466}
 --- !u!65 &3640103468309048834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9532,6 +9519,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029491102, y: 0.012175987, z: 0.08004493}
   m_Center: {x: -0.00008467584, y: -0.001135055, z: -0.036022466}
+--- !u!65 &7726529934544478832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736102617968676411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.02, z: 0.08004493}
+  m_Center: {x: -0.00008467584, y: 0.0028, z: -0.036022466}
 --- !u!1 &4388226602459584347
 GameObject:
   m_ObjectHideFlags: 0
@@ -9574,7 +9574,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 25.34, y: 10.28, z: 1}
+  m_Size: {x: 100, y: 100, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7225872443887817015
 GameObject:
