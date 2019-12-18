@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf435009bfc50244a9ecfc9c5f055a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalChunks: 8
+  totalChunks: 12
   iniOffset: 30
   finOffset: 16
   chunks:
