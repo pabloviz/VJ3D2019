@@ -25,4 +25,13 @@ public class StartButton : MonoBehaviour
     {
         SceneManager.LoadScene("How to play");
     }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
